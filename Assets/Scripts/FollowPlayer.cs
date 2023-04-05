@@ -20,7 +20,7 @@ public class FollowPlayer : MonoBehaviour
     {
         if (Input.GetAxis("Vertical") < 0)
         {
-            transform.position = gameObject.transform.position + toBack;
+            transform.position = gameObject.transform.position + new Vector3(0, 5, -7 + Input.GetAxis("Vertical")*2);
             return;
         }
         transform.position = gameObject.transform.position + toForward;
